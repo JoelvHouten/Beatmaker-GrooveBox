@@ -1,0 +1,435 @@
+@font-face {
+    font-family: 'Topaz';
+    src: url('fonts/topaz.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    cursor: url('/images/pointer_cursor.png'), auto;
+}
+
+a, button, input[type="button"], input[type="submit"], .slider {
+    cursor: url('/images/hand_cursor.png'), auto !important;
+}
+
+body {
+    background: url("images/background.jpg");
+    font-family: "Topaz", monospace;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.amiga-workbench-top-window {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: #b1b1b1;
+    border-left: 2px solid #dcdcdc;
+    border-right: 2px solid #131a24;
+    border-bottom: 2px solid #000;
+    box-shadow: none;
+}
+
+.amiga-top-menubar {
+    background: #ffffff;
+    border-bottom: 2px solid #000;
+    font-family: "Topaz", monospace;
+    font-size: clamp(14px, 3vw, 16px);
+    padding: 1px;
+    white-space: nowrap;
+}
+
+.amiga-app-window {
+    max-width: 635px;
+    min-width: 635px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: #b1b1b1;
+    border-left: 2px solid #dcdcdc;
+    border-right: 2px solid #131a24;
+    border-bottom: 2px solid #000;
+    box-shadow: none;
+}
+
+.amiga-icon {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amiga-app-window {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    background: #b1b1b1;
+    border-left: 2px solid #dcdcdc;
+    border-right: 2px solid #131a24;
+    border-bottom: 2px solid #000;
+    display: none;
+}
+.amiga-app-window.active {
+    display: block;
+}
+
+.icon-box {
+    height: 48px;
+    margin: 0 auto 4px;
+    padding: 2px;
+    background: #b1b1b1;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.icon-box.selected {
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.icon-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-box.icon-groovebox {
+    width: 96px;
+    height: 96px;
+}
+.icon-box.icon-groovebox img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-label {
+    font-size: 16px;
+    font-family: "Topaz", monospace;
+    color: #000;
+}
+
+.amiga-titlebar {
+    background: #6a8ec3;
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #000;
+    cursor: url('/images/hand_cursor.png'), auto !important;
+}
+
+.amiga-titlebar-disabled {
+    background: #b1b1b1;
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #000;
+}
+
+.amiga-titlebar-buttons {
+    display: flex;
+    gap: 2px;
+}
+
+.amiga-titlebar button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 0;
+    background: #6a8ec3;
+    padding: 0;
+    color: #000;
+    margin-right: 5px;
+    border: none;
+    box-shadow:
+        inset -1px 0 #b4c6e1,
+        inset -2px 0 #6f6f6f,
+        inset -3px 0 #425879;
+}
+
+.amiga-titlebar-disabled button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 0;
+    background: #b1b1b1;
+    padding: 0;
+    color: #000;
+    margin-right: 5px;
+    border: none;
+    box-shadow:
+        inset -1px 0 #dddddd,
+        inset -2px 0 #6f6f6f,
+        inset -3px 0 #747474;
+}
+
+.amiga-titlebar button:active {
+   border-color: #404040 #fff #fff #404040;
+}
+
+.btn-amiga {
+    background: #b1b1b1;
+    border: 2px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 2px 6px;
+    margin-right: 4px;
+    font-size: 18px;
+    font-family: Topaz;
+    color: #000;
+    width: 90px;
+    height: 35px;
+    min-width: 90px;
+}
+
+.btn-amiga:active {
+   border-color: #404040 #fff #fff #404040;
+}
+
+.close-btn {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    background: #b1b1b1;
+    border: 2px solid #000;
+    padding: 0;
+}
+
+.close-btn::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #000;
+}
+
+.close-btn:active {
+    background: #c0c0c0;
+}
+
+.content {
+   padding: 6px;
+   min-width: 350px;
+}
+
+.grid {
+    border: 2px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    background: #b1b1b1;
+    margin: 0px 10px 10px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.label {
+    width: 140px;
+    color: #000;
+    margin-left: 5px;
+}
+
+.step {
+    background: #b1b1b1;
+    border: 2px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 2px 6px;
+    margin-right: 4px;
+    font-size: 18px;
+    font-family: Topaz;
+    color: #000;
+    width: 24px;
+    height: 24px;
+}
+
+.step.active {
+    background-color: #6a8ec3;
+    border: 2px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+}
+
+.step.current {
+    background: #dadada52;
+    border: 2px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+}
+
+.slidecontainer{
+    width: 100%;
+    padding-top: 6px;
+}
+
+.slider{
+    width: 100%;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background: #b1b1b1;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-radius: 0 !important;
+    cursor: pointer;
+    background: #b1b1b1;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 25px;
+    border-radius: 0 !important;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background: #b1b1b1;
+}
+
+.bpm-input::-webkit-outer-spin-button,
+.bpm-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bpm-input {
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    font-size: 18px;
+    background-color: #c0c0c0;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+}
+
+.bpm-input:focus {
+     background-color: #e0e0e0;
+}
+
+.beat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-right: 3px;
+    justify-content: right;
+}
+
+.beat-row .label {
+    width: 80px;
+}
+
+.beat-marker {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    margin-right: 2px;
+    padding: 2px 0px;
+    margin-right: 4px;
+}
+
+.row.sequence-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+}
+
+.kit-dropdown {
+    display: none;
+    flex-direction: column;
+    background: #b1b1b1;
+    position: absolute;
+    display: flex;
+    top: 35px;
+    left: 4px;
+    z-index: 10;
+    width: 201px;
+}
+
+.kit-dropdown .kit-option {
+    margin: 0;
+    border-radius: 0;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.kit-dropdown .kit-option:hover {
+    margin: 0;
+    border-radius: 0;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background: #6a8ec3;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .amiga-app-window {
+        max-width: 452px;
+        min-width: 452px;
+    }
+
+    .row.sequence-row {
+        flex-wrap: wrap !important;
+        margin-left: auto;
+    }
+
+    .label {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .step {
+        padding: 2px 6px;
+        margin-right: 4px;
+        padding-left: 4px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .grid{
+        margin: 0;
+    }
+
+    .beat-row{
+        display: none;
+    }
+}

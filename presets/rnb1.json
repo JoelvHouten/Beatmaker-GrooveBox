@@ -1,0 +1,12 @@
+{
+  "kit": "rnb",
+  "bpm": 88,
+  "rows": [
+    { "instrument": "Bass drum", "steps": [1,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0] },
+    { "instrument": "Snare", "steps": [0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0] },
+    { "instrument": "Clap", "steps": [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0] },
+    { "instrument": "Hihat", "steps": [1,0,0,1,0,1,0,1,1,0,0,1,0,1,0,1] },
+    { "instrument": "Percussion 2", "steps": [0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0] },
+    { "instrument": "Cymbal", "steps": [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0] }
+  ]
+}
